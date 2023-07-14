@@ -16,29 +16,67 @@ const AddTaskForm = ({ tasks, setTasks }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="form-control">
-          <label htmlFor="task">Task</label>
+        <div
+          class="input-group flex-nowrap"
+          style={{ display: "flex", flexDirection: "column" }}
+        >
+          <span
+            class="input-group-text"
+            id="addon-wrapping"
+            style={{
+              width: "80%",
+              height: "40px",
+              margin: "1rem auto 0",
+              textAlign: "center",
+            }}
+          >
+            Task
+          </span>
           <input
             type="text"
-            name="task"
-            id="task"
-            placeholder="add task"
+            class="form-control"
+            placeholder="Add Task"
+            aria-label="Add Task"
+            aria-describedby="addon-wrapping"
             value={task}
             onChange={(e) => setTask(e.target.value)}
             required
+            style={{ height: "50px", width: "80%", margin: "1rem auto 0" }}
           />
         </div>
-        <div className="form-control">
-          <label htmlFor="day">Day & Time</label>
+
+        <div
+          class="input-group flex-nowrap"
+          style={{
+            marginTop: "2rem",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <span
+            class="input-group-text"
+            id="addon-wrapping"
+            style={{
+              width: "80%",
+              height: "40px",
+              margin: "1rem auto 0",
+              textAlign: "center",
+            }}
+          >
+            Day & Time
+          </span>
           <input
             type="date"
-            name="day"
-            id="day"
+            class="form-control"
+            aria-label="day"
+            aria-describedby="addon-wrapping"
             value={day}
             onChange={(e) => setDay(e.target.value)}
             required
+            style={{ height: "50px", width: "80%", margin: "1rem auto 0" }}
           />
         </div>
+
         <div>
           <button type="submit" className="btn btn-submit">
             Submit
