@@ -14,12 +14,12 @@ const ShowTasks = ({ tasks }) => {
           </tr>
         </thead>
         <tbody>
-          {tasks.map((tasks) => {
+          {tasks.map((task) => {
             return (
               <tr>
-                <th>{tasks.id}</th>
-                <td>{tasks.task}</td>
-                <td>{tasks.day}</td>
+                <th>{task.id}</th>
+                <td>{task.task}</td>
+                <td>{task.day}</td>
               </tr>
             );
           })}
